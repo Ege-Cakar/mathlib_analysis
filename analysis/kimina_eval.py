@@ -106,6 +106,7 @@ def main() -> None:
     p.add_argument("--max-new-tokens", type=int, default=2048)
     p.add_argument("--temperature", type=float, default=0.7)
     p.add_argument("--lean-timeout", type=int, default=120)
+    p.add_argument("--skip-lean", action="store_true", help="Generate proofs without Lean verification.")
     args = p.parse_args()
 
     rows = []
@@ -132,7 +133,9 @@ def main() -> None:
                 lean_output = "not run"
                 if code:
                     try:
-                        if re.search(r"\b(sorry|admit)\b", code):
+                        if args.skip_lean:
+                            lean_output = "skipped"
+                        elif re.search(r"\b(sorry|admit)\b", code):
                             lean_output = "rejected before Lean: generated proof contains sorry/admit"
                         else:
                             passed, lean_output = verify(Path(args.mathlib_dir), row, code, args.lean_timeout)
