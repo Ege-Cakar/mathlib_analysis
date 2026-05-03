@@ -1,0 +1,1 @@
+{"status": "not_run", "reason": "ReProver is not installed in this workspace", "post_kimina_manifest": "results/prover_eval/post_kimina_manifest.jsonl", "standard_baseline": "run ReProver documented LeanDojo Benchmark 4 eval in a ReProver checkout"}

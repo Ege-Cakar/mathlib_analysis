@@ -1,0 +1,29 @@
+{
+  "oracle": "CategoryTheory.isIso_of_mono_of_epi",
+  "goal": "CategoryTheory.ShortComplex.isIso₂_of_shortExact_of_isIso₁₃",
+  "found": true,
+  "edge_count": 1,
+  "path": [
+    {
+      "source": "CategoryTheory.ShortComplex.isIso₂_of_shortExact_of_isIso₁₃",
+      "target": "CategoryTheory.isIso_of_mono_of_epi",
+      "source_file": "Mathlib/Algebra/Homology/ShortComplex/ShortExact.lean",
+      "target_file": "Mathlib/CategoryTheory/Balanced.lean",
+      "source_category": "Algebra",
+      "target_category": "CategoryTheory",
+      "split": "val",
+      "tactic_index": 6,
+      "tactic": "apply isIso_of_mono_of_epi",
+      "tactic_head": "apply",
+      "target_pos": [
+        39,
+        9
+      ],
+      "target_end_pos": [
+        39,
+        29
+      ],
+      "occurrences": 1
+    }
+  ]
+}

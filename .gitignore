@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# Virtual environment
+.venv/
+
+# Claude internal worktrees / session state
+.claude/
+analysis/.claude/
+
+# Large raw data files (re-generatable)
+data/leandojo/
+data/leantree/
+data/hypergraph_triples.jsonl
+data/hypergraph.json
+
+# Keep stats (small summary)
+!data/hypergraph_stats.json
+
+# OS
+.DS_Store
+
+# Generated result caches / large regenerable artifacts
+results/.DS_Store
+results/_matplotlib/
+results/paths/dependency_edges.jsonl
+results/paths/nodes.jsonl
+results/spectral/spectral_features.csv

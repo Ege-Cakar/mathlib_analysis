@@ -1,0 +1,65 @@
+{
+  "cutoff": "2025-08-14",
+  "base_commit": "3f11243a35b7291810cd419eddcf0f7ee2bbbf3a",
+  "changed_lean_files_scanned": 160,
+  "manifest_rows": 25,
+  "verify_sorry": true,
+  "category_counts": [
+    [
+      "Analysis",
+      3
+    ],
+    [
+      "Topology",
+      2
+    ],
+    [
+      "GroupTheory",
+      2
+    ],
+    [
+      "RingTheory",
+      2
+    ],
+    [
+      "Data",
+      2
+    ],
+    [
+      "Order",
+      2
+    ],
+    [
+      "NumberTheory",
+      2
+    ],
+    [
+      "Tactic",
+      2
+    ],
+    [
+      "Combinatorics",
+      2
+    ],
+    [
+      "Dynamics",
+      2
+    ],
+    [
+      "Algebra",
+      1
+    ],
+    [
+      "MeasureTheory",
+      1
+    ],
+    [
+      "LinearAlgebra",
+      1
+    ],
+    [
+      "Probability",
+      1
+    ]
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "n_train": 72753,
+  "n_test": 18207,
+  "categories": [
+    "Algebra",
+    "AlgebraicGeometry",
+    "AlgebraicTopology",
+    "Analysis",
+    "CategoryTheory",
+    "Combinatorics",
+    "Computability",
+    "Control",
+    "Data",
+    "Deprecated",
+    "Dynamics",
+    "FieldTheory",
+    "Geometry",
+    "GroupTheory",
+    "Init",
+    "LinearAlgebra",
+    "Logic",
+    "MeasureTheory",
+    "ModelTheory",
+    "NumberTheory",
+    "Order",
+    "Probability",
+    "RepresentationTheory",
+    "RingTheory",
+    "SetTheory",
+    "Tactic",
+    "Topology"
+  ],
+  "baselines": {
+    "majority": {
+      "accuracy": 0.16526610644257703,
+      "macro_f1": 0.010505698005698005,
+      "top3_accuracy": 0.19789092107431208
+    },
+    "namespace_prior": {
+      "accuracy": 0.7368045257318614,
+      "macro_f1": 0.7531971513545386,
+      "top3_accuracy": 0.7544900313066403
+    }
+  },
+  "models": {
+    "degree": {
+      "logreg": {
+        "accuracy": 0.16164112703905092,
+        "macro_f1": 0.018011236535552064,
+        "top3_accuracy": 0.42972483110891413
+      },
+      "mlp": {
+        "accuracy": 0.17180205415499533,
+        "macro_f1": 0.01919325305477835,
+        "top3_accuracy": 0.4283517328500027
+      }
+    },
+    "low10": {
+      "logreg": {
+        "accuracy": 0.166584280771132,
+        "macro_f1": 0.012643175574786189,
+        "top3_accuracy": 0.4270335585214478
+      },
+      "mlp": {
+        "accuracy": 0.15592903828197946,
+        "macro_f1": 0.0216702648268946,
+        "top3_accuracy": 0.4237930466304169
+      }
+    },
+    "high10": {
+      "logreg": {
+        "accuracy": 0.16570549788542868,
+        "macro_f1": 0.011680810580522175,
+        "top3_accuracy": 0.4263744713571703
+      },
+      "mlp": {
+        "accuracy": 0.13698028230900203,
+        "macro_f1": 0.030390798952809925,
+        "top3_accuracy": 0.3577744823419564
+      }
+    },
+    "low10+high10": {
+      "logreg": {
+        "accuracy": 0.16570549788542868,
+        "macro_f1": 0.01252808488357499,
+        "top3_accuracy": 0.4263744713571703
+      },
+      "mlp": {
+        "accuracy": 0.16219036634261547,
+        "macro_f1": 0.031062350495193087,
+        "top3_accuracy": 0.34827264239028943
+      }
+    },
+    "low32": {
+      "logreg": {
+        "accuracy": 0.16466194320865601,
+        "macro_f1": 0.014252657955151096,
+        "top3_accuracy": 0.42555061240182346
+      },
+      "mlp": {
+        "accuracy": 0.1556544186301972,
+        "macro_f1": 0.03199254781132491,
+        "top3_accuracy": 0.39556214642719834
+      }
+    },
+    "high32": {
+      "logreg": {
+        "accuracy": 0.16570549788542868,
+        "macro_f1": 0.01236379865221349,
+        "top3_accuracy": 0.42555061240182346
+      },
+      "mlp": {
+        "accuracy": 0.14791014444993683,
+        "macro_f1": 0.022444289594003845,
+        "top3_accuracy": 0.35475366617235127
+      }
+    },
+    "low32+high32": {
+      "logreg": {
+        "accuracy": 0.16548580216400285,
+        "macro_f1": 0.014609213864496977,
+        "top3_accuracy": 0.42472675344647665
+      },
+      "mlp": {
+        "accuracy": 0.15955401768550556,
+        "macro_f1": 0.02493995403434644,
+        "top3_accuracy": 0.412973032350195
+      }
+    },
+    "low10+degree": {
+      "logreg": {
+        "accuracy": 0.16361838853188335,
+        "macro_f1": 0.019182392534797702,
+        "top3_accuracy": 0.4302191464821223
+      },
+      "mlp": {
+        "accuracy": 0.17669028395671993,
+        "macro_f1": 0.021284854707150438,
+        "top3_accuracy": 0.426813862800022
+      }
+    },
+    "high10+degree": {
+      "logreg": {
+        "accuracy": 0.16230021420332838,
+        "macro_f1": 0.01824407033743854,
+        "top3_accuracy": 0.42945021145713186
+      },
+      "mlp": {
+        "accuracy": 0.16685890042291426,
+        "macro_f1": 0.020030137007488555,
+        "top3_accuracy": 0.4266490910089526
+      }
+    },
+    "low10+high10+degree": {
+      "logreg": {
+        "accuracy": 0.16284945350689295,
+        "macro_f1": 0.019057775770814658,
+        "top3_accuracy": 0.42977975503927063
+      },
+      "mlp": {
+        "accuracy": 0.1510957324106113,
+        "macro_f1": 0.02016723968736509,
+        "top3_accuracy": 0.39589169000933705
+      }
+    },
+    "low32+degree": {
+      "logreg": {
+        "accuracy": 0.16164112703905092,
+        "macro_f1": 0.020614081151054522,
+        "top3_accuracy": 0.4287911242928544
+      },
+      "mlp": {
+        "accuracy": 0.17317515241390674,
+        "macro_f1": 0.02058588809861441,
+        "top3_accuracy": 0.42807711319822045
+      }
+    },
+    "high32+degree": {
+      "logreg": {
+        "accuracy": 0.16301422529796233,
+        "macro_f1": 0.018956830044075636,
+        "top3_accuracy": 0.4288460482232109
+      },
+      "mlp": {
+        "accuracy": 0.17240621738891634,
+        "macro_f1": 0.020746729602664934,
+        "top3_accuracy": 0.4287911242928544
+      }
+    },
+    "low32+high32+degree": {
+      "logreg": {
+        "accuracy": 0.1632888449497446,
+        "macro_f1": 0.019587461324127156,
+        "top3_accuracy": 0.4275278738946559
+      },
+      "mlp": {
+        "accuracy": 0.17355961992640193,
+        "macro_f1": 0.021643200245013792,
+        "top3_accuracy": 0.42807711319822045
+      }
+    }
+  }
+}

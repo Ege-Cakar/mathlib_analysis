@@ -1,0 +1,29 @@
+{
+  "oracle": "WithLp.prod_norm_eq_add",
+  "goal": "WithLp.prod_nnnorm_eq_add",
+  "found": true,
+  "edge_count": 1,
+  "path": [
+    {
+      "source": "WithLp.prod_nnnorm_eq_add",
+      "target": "WithLp.prod_norm_eq_add",
+      "source_file": "Mathlib/Analysis/NormedSpace/ProdLp.lean",
+      "target_file": "Mathlib/Analysis/NormedSpace/ProdLp.lean",
+      "source_category": "Analysis",
+      "target_category": "Analysis",
+      "split": "val",
+      "tactic_index": 1,
+      "tactic": "simp [prod_norm_eq_add (p.toReal_pos_iff_ne_top.mpr hp)]",
+      "tactic_head": "simp",
+      "target_pos": [
+        272,
+        9
+      ],
+      "target_end_pos": [
+        272,
+        25
+      ],
+      "occurrences": 1
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "oracle": "Algebra.trace_localization",
+  "goal": "Algebra.intTrace_eq_trace",
+  "found": true,
+  "edge_count": 1,
+  "path": [
+    {
+      "source": "Algebra.intTrace_eq_trace",
+      "target": "Algebra.trace_localization",
+      "source_file": "Mathlib/RingTheory/IntegralRestrict.lean",
+      "target_file": "Mathlib/RingTheory/Localization/NormTrace.lean",
+      "source_category": "RingTheory",
+      "target_category": "RingTheory",
+      "split": "train",
+      "tactic_index": 4,
+      "tactic": "rw [Algebra.algebraMap_intTrace_fractionRing, Algebra.trace_localization A A⁰]",
+      "tactic_head": "rw",
+      "target_pos": [
+        83,
+        9
+      ],
+      "target_end_pos": [
+        83,
+        35
+      ],
+      "occurrences": 1
+    }
+  ]
+}
