@@ -1,0 +1,19 @@
+{
+  "config": {
+    "n_pairs": 10000,
+    "n_features": 258,
+    "feature_layout": "low(u)|high(u)|low(v)|high(v) -> + cu|cv|cu*cv|abs(cu-cv) + log1p(deg(u))|log1p(deg(v))"
+  },
+  "n_train": 16012,
+  "n_test": 3988,
+  "spectral_full": {
+    "acc": 0.7891173520561685,
+    "auc": 0.8809483310653966,
+    "epoch": 1
+  },
+  "degree_only": {
+    "acc": 0.7851053159478435,
+    "auc": 0.8748876871047786,
+    "epoch": 38
+  }
+}

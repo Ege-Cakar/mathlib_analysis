@@ -1,0 +1,144 @@
+{
+  "config": {
+    "pairs": 2000,
+    "max_depth": 12,
+    "discharge": false,
+    "discharge_depth": 6,
+    "discharge_expansions": 2000,
+    "seed": 0
+  },
+  "or_reachability": {
+    "pairs_tried": 2000,
+    "found": 2,
+    "found_fraction": 0.001,
+    "depth_histogram": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  "dep_graph_cross_validation": {
+    "pairs_tried": 1000,
+    "found": 25,
+    "found_fraction": 0.025,
+    "depth_histogram": {
+      "0": 11,
+      "1": 5,
+      "2": 3,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "7": 1,
+      "10": 1
+    },
+    "rate_by_dep_tactic_head": [
+      {
+        "tactic_head": "induction",
+        "n": 9,
+        "found": 1,
+        "rate": 0.1111111111111111
+      },
+      {
+        "tactic_head": "exact",
+        "n": 100,
+        "found": 11,
+        "rate": 0.11
+      },
+      {
+        "tactic_head": "refine",
+        "n": 54,
+        "found": 5,
+        "rate": 0.09259259259259259
+      },
+      {
+        "tactic_head": "have",
+        "n": 83,
+        "found": 3,
+        "rate": 0.03614457831325301
+      },
+      {
+        "tactic_head": "apply",
+        "n": 40,
+        "found": 1,
+        "rate": 0.025
+      },
+      {
+        "tactic_head": "simp",
+        "n": 129,
+        "found": 2,
+        "rate": 0.015503875968992248
+      },
+      {
+        "tactic_head": "rw",
+        "n": 359,
+        "found": 2,
+        "rate": 0.005571030640668524
+      },
+      {
+        "tactic_head": "simp_rw",
+        "n": 45,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "rcases",
+        "n": 6,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "simpa",
+        "n": 47,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "rwa",
+        "n": 16,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "suffices",
+        "n": 15,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "nth_rw",
+        "n": 5,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "erw",
+        "n": 10,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "classical",
+        "n": 11,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "convert",
+        "n": 14,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "obtain",
+        "n": 19,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "calc",
+        "n": 10,
+        "found": 0,
+        "rate": 0.0
+      }
+    ]
+  }
+}

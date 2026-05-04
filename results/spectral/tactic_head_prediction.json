@@ -1,0 +1,39 @@
+{
+  "config": {
+    "n_edges": 80000,
+    "tactic_heads": [
+      "rw",
+      "simp",
+      "have",
+      "exact",
+      "refine",
+      "simp_rw",
+      "simpa",
+      "apply"
+    ]
+  },
+  "class_distribution_train": {
+    "rw": 21256,
+    "simp": 13423,
+    "have": 8987,
+    "exact": 7911,
+    "refine": 4634,
+    "simp_rw": 2903,
+    "simpa": 2510,
+    "apply": 2233
+  },
+  "majority_baseline": {
+    "accuracy": 0.33897045158892397,
+    "predicted_class": "rw"
+  },
+  "degree_only": {
+    "accuracy": 0.3494393854921638,
+    "macro_f1": 0.10287472954970889,
+    "epoch": 26
+  },
+  "spectral_concat": {
+    "accuracy": 0.34634206776931176,
+    "macro_f1": 0.11048466013063776,
+    "epoch": 0
+  }
+}

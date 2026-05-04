@@ -1,0 +1,105 @@
+{
+  "theorems_indexed": 122517,
+  "theorems_with_traces": 61544,
+  "tactic_invocations": 259580,
+  "unique_states": 261655,
+  "unique_hyperedges": 261107,
+  "multi_output_hyperedges": 18467,
+  "output_size_histogram": {
+    "1": 242640,
+    "2": 15786,
+    "3": 1650,
+    "4": 689,
+    "5": 144,
+    "6": 75,
+    "7": 29,
+    "8": 33,
+    "9": 38,
+    "10": 2,
+    "12": 6,
+    "15": 1,
+    "17": 14
+  },
+  "top_tactic_heads_by_distinct_edges": [
+    [
+      "rw",
+      48939
+    ],
+    [
+      "simp",
+      33207
+    ],
+    [
+      "exact",
+      30736
+    ],
+    [
+      "have",
+      16872
+    ],
+    [
+      "refine",
+      14289
+    ],
+    [
+      "apply",
+      10045
+    ],
+    [
+      "intro",
+      8322
+    ],
+    [
+      "simpa",
+      7302
+    ],
+    [
+      "obtain",
+      6527
+    ],
+    [
+      "rcases",
+      5173
+    ],
+    [
+      "ext",
+      5150
+    ],
+    [
+      "rintro",
+      5035
+    ],
+    [
+      "simp_rw",
+      4800
+    ],
+    [
+      "rfl",
+      3932
+    ],
+    [
+      "rwa",
+      3215
+    ],
+    [
+      "let",
+      3212
+    ],
+    [
+      "by_cases",
+      2751
+    ],
+    [
+      "cases",
+      2654
+    ],
+    [
+      "convert",
+      2625
+    ],
+    [
+      "dsimp",
+      2518
+    ]
+  ]
+}

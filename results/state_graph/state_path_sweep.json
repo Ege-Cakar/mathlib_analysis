@@ -1,0 +1,16 @@
+{
+  "config": {
+    "pairs": 2000,
+    "max_depth": 12,
+    "discharge": false,
+    "discharge_depth": 6,
+    "discharge_expansions": 2000,
+    "seed": 0
+  },
+  "or_reachability": {
+    "pairs_tried": 2000,
+    "found": 0,
+    "found_fraction": 0.0,
+    "depth_histogram": {}
+  }
+}

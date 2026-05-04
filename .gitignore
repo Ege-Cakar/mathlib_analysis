@@ -4,8 +4,11 @@ __pycache__/
 *.pyo
 .Python
 
-# Virtual environment
+# Virtual environments
 .venv/
+.venv-mwm/
+.venv-gpu/
+.myvenv/
 
 # Claude internal worktrees / session state
 .claude/
@@ -29,3 +32,6 @@ results/_matplotlib/
 results/paths/dependency_edges.jsonl
 results/paths/nodes.jsonl
 results/spectral/spectral_features.csv
+results/state_graph/state_nodes.jsonl
+results/state_graph/state_hyperedges.jsonl
+results/state_graph/theorem_initial_states.jsonl
