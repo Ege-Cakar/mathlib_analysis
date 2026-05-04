@@ -1,0 +1,40 @@
+{
+  "config": {
+    "walks_per_node": 10,
+    "walk_length": 40,
+    "dim": 64,
+    "window": 5,
+    "epochs": 3,
+    "negative": 5
+  },
+  "n_theorems": 57601,
+  "reports": [
+    {
+      "feature_set": "degree",
+      "n_features": 2,
+      "test": {
+        "r2": 0.5056833006007836,
+        "pearson": 0.7111572697515807,
+        "rmse": 0.48887551839730825
+      }
+    },
+    {
+      "feature_set": "node2vec",
+      "n_features": 64,
+      "test": {
+        "r2": 0.1622342470047371,
+        "pearson": 0.40311838059614036,
+        "rmse": 0.6364392418552977
+      }
+    },
+    {
+      "feature_set": "node2vec+degree",
+      "n_features": 66,
+      "test": {
+        "r2": 0.5552396975752527,
+        "pearson": 0.7451728744739885,
+        "rmse": 0.4637230212505621
+      }
+    }
+  ]
+}

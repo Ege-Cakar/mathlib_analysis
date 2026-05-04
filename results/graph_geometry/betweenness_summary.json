@@ -1,0 +1,245 @@
+{
+  "n_nodes": 94635,
+  "sources_sampled": 200,
+  "top_30": [
+    {
+      "rank": 1,
+      "name": "rfl",
+      "bc": 1440600325.6402645,
+      "out_deg": 0,
+      "in_deg": 2645
+    },
+    {
+      "rank": 2,
+      "name": "Eq.symm",
+      "bc": 562782664.3481221,
+      "out_deg": 0,
+      "in_deg": 1493
+    },
+    {
+      "rank": 3,
+      "name": "le_antisymm",
+      "bc": 297202880.862197,
+      "out_deg": 0,
+      "in_deg": 814
+    },
+    {
+      "rank": 4,
+      "name": "mul_one",
+      "bc": 292551338.9662129,
+      "out_deg": 0,
+      "in_deg": 1171
+    },
+    {
+      "rank": 5,
+      "name": "CategoryTheory.Category.assoc",
+      "bc": 290102022.7167655,
+      "out_deg": 0,
+      "in_deg": 695
+    },
+    {
+      "rank": 6,
+      "name": "mul_comm",
+      "bc": 273857357.3437999,
+      "out_deg": 0,
+      "in_deg": 1462
+    },
+    {
+      "rank": 7,
+      "name": "mul_assoc",
+      "bc": 261166941.87451604,
+      "out_deg": 0,
+      "in_deg": 1267
+    },
+    {
+      "rank": 8,
+      "name": "one_mul",
+      "bc": 253279820.97965035,
+      "out_deg": 0,
+      "in_deg": 1015
+    },
+    {
+      "rank": 9,
+      "name": "Function.comp_apply",
+      "bc": 236963722.46218032,
+      "out_deg": 0,
+      "in_deg": 691
+    },
+    {
+      "rank": 10,
+      "name": "eq_comm",
+      "bc": 188864441.82282275,
+      "out_deg": 0,
+      "in_deg": 701
+    },
+    {
+      "rank": 11,
+      "name": "le_rfl",
+      "bc": 177668256.8370999,
+      "out_deg": 0,
+      "in_deg": 598
+    },
+    {
+      "rank": 12,
+      "name": "congr_arg",
+      "bc": 156087758.9470937,
+      "out_deg": 0,
+      "in_deg": 680
+    },
+    {
+      "rank": 13,
+      "name": "add_zero",
+      "bc": 152240673.93159422,
+      "out_deg": 0,
+      "in_deg": 616
+    },
+    {
+      "rank": 14,
+      "name": "add_comm",
+      "bc": 142794470.7555627,
+      "out_deg": 0,
+      "in_deg": 950
+    },
+    {
+      "rank": 15,
+      "name": "zero_add",
+      "bc": 138611650.81630045,
+      "out_deg": 0,
+      "in_deg": 634
+    },
+    {
+      "rank": 16,
+      "name": "LE.le.trans",
+      "bc": 133324800.03702502,
+      "out_deg": 0,
+      "in_deg": 699
+    },
+    {
+      "rank": 17,
+      "name": "Iff.mp",
+      "bc": 126194042.62520649,
+      "out_deg": 0,
+      "in_deg": 639
+    },
+    {
+      "rank": 18,
+      "name": "if_neg",
+      "bc": 123029543.70243785,
+      "out_deg": 0,
+      "in_deg": 401
+    },
+    {
+      "rank": 19,
+      "name": "id",
+      "bc": 119898442.84656444,
+      "out_deg": 0,
+      "in_deg": 452
+    },
+    {
+      "rank": 20,
+      "name": "Iff.mpr",
+      "bc": 119591015.07676728,
+      "out_deg": 0,
+      "in_deg": 542
+    },
+    {
+      "rank": 21,
+      "name": "Set.mem_setOf_eq",
+      "bc": 113037397.54805656,
+      "out_deg": 0,
+      "in_deg": 480
+    },
+    {
+      "rank": 22,
+      "name": "le_trans",
+      "bc": 111368519.86259794,
+      "out_deg": 0,
+      "in_deg": 565
+    },
+    {
+      "rank": 23,
+      "name": "CategoryTheory.Category.id_comp",
+      "bc": 110995712.51156646,
+      "out_deg": 0,
+      "in_deg": 319
+    },
+    {
+      "rank": 24,
+      "name": "Ne",
+      "bc": 110241428.6034716,
+      "out_deg": 0,
+      "in_deg": 627
+    },
+    {
+      "rank": 25,
+      "name": "eq_or_ne",
+      "bc": 106280645.79453924,
+      "out_deg": 0,
+      "in_deg": 559
+    },
+    {
+      "rank": 26,
+      "name": "exists_prop",
+      "bc": 105685869.66688804,
+      "out_deg": 0,
+      "in_deg": 448
+    },
+    {
+      "rank": 27,
+      "name": "mt",
+      "bc": 101559225.46340466,
+      "out_deg": 0,
+      "in_deg": 376
+    },
+    {
+      "rank": 28,
+      "name": "and_comm",
+      "bc": 100711293.35579143,
+      "out_deg": 0,
+      "in_deg": 233
+    },
+    {
+      "rank": 29,
+      "name": "Or.inl",
+      "bc": 98248746.83760682,
+      "out_deg": 0,
+      "in_deg": 525
+    },
+    {
+      "rank": 30,
+      "name": "Set",
+      "bc": 94285072.49575396,
+      "out_deg": 0,
+      "in_deg": 599
+    }
+  ],
+  "regression": [
+    {
+      "feature_set": "bc",
+      "n_features": 1,
+      "test": {
+        "r2": 0.18342855636542932,
+        "pearson": 0.42872133587333167,
+        "rmse": 0.6283371565215857
+      }
+    },
+    {
+      "feature_set": "degree",
+      "n_features": 2,
+      "test": {
+        "r2": 0.5056833006007836,
+        "pearson": 0.7111572697515807,
+        "rmse": 0.48887551839730825
+      }
+    },
+    {
+      "feature_set": "bc+degree",
+      "n_features": 3,
+      "test": {
+        "r2": 0.5112221492152422,
+        "pearson": 0.7150419820110198,
+        "rmse": 0.4861288626859095
+      }
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "config": {
+    "sample": 5000,
+    "max_neighborhood": 50,
+    "horizon": 4,
+    "bottleneck_threshold": -1.0
+  },
+  "n_evaluated": 3320,
+  "mean_kappa": -0.7812147102454126,
+  "median_kappa": -0.8400000000000009,
+  "min_kappa": -1.7881773399014778,
+  "max_kappa": 0.5428571428571429,
+  "fraction_negative": 0.8867469879518072,
+  "fraction_below_threshold": 0.3566265060240964,
+  "bottlenecks_top": [
+    {
+      "u": "spectrum.map_polynomial_aeval_of_degree_pos",
+      "v": "symm",
+      "kappa": -1.7881773399014778,
+      "deg_u": 29,
+      "deg_v": 21
+    },
+    {
+      "u": "Eq.refl",
+      "v": "WithSeminorms.isVonNBounded_iff_seminorm_bounded",
+      "kappa": -1.7533333333333339,
+      "deg_u": 25,
+      "deg_v": 12
+    },
+    {
+      "u": "Unit",
+      "v": "coevaluation_apply_one",
+      "kappa": -1.7512820512820517,
+      "deg_u": 26,
+      "deg_v": 15
+    },
+    {
+      "u": "Finset.card_add_card_sub_one_le_card_mul",
+      "v": "mul_left_inj",
+      "kappa": -1.7365591397849456,
+      "deg_u": 31,
+      "deg_v": 12
+    },
+    {
+      "u": "FiniteField.isSquare_neg_one_iff",
+      "v": "one_ne_zero'",
+      "kappa": -1.7195652173913047,
+      "deg_u": 20,
+      "deg_v": 23
+    },
+    {
+      "u": "AnalyticAt.unique_eventuallyEq_zpow_smul_nonzero",
+      "v": "Int.toNat_sub_of_le",
+      "kappa": -1.7166666666666668,
+      "deg_u": 24,
+      "deg_v": 10
+    },
+    {
+      "u": "Set.empty_subset",
+      "v": "spectrum_star_mul_self_of_isStarNormal",
+      "kappa": -1.71256038647343,
+      "deg_u": 46,
+      "deg_v": 18
+    },
+    {
+      "u": "Finset.filter_val",
+      "v": "Nat.divisors_filter_squarefree",
+      "kappa": -1.695945945945947,
+      "deg_u": 12,
+      "deg_v": 37
+    },
+    {
+      "u": "Ideal.zero_mem",
+      "v": "ValuationSubring.ofPrime_idealOfLE",
+      "kappa": -1.6806722689075633,
+      "deg_u": 14,
+      "deg_v": 17
+    },
+    {
+      "u": "List.nil_append",
+      "v": "Nat.isZeckendorfRep_zeckendorf",
+      "kappa": -1.6764705882352935,
+      "deg_u": 34,
+      "deg_v": 17
+    },
+    {
+      "u": "Pi.le_def",
+      "v": "Quot.subsingleton_iff",
+      "kappa": -1.675324675324675,
+      "deg_u": 14,
+      "deg_v": 11
+    },
+    {
+      "u": "Set.sUnion_eq_biUnion",
+      "v": "TopologicalSpace.Opens.isBasis_iff_cover",
+      "kappa": -1.6643356643356642,
+      "deg_u": 39,
+      "deg_v": 11
+    },
+    {
+      "u": "CategoryTheory.Limits.isIndObject_of_isFiltered_of_finallySmall",
+      "v": "Nonempty.map",
+      "kappa": -1.6643356643356642,
+      "deg_u": 22,
+      "deg_v": 13
+    },
+    {
+      "u": "AlgebraicGeometry.AffineTargetMorphismProperty.IsLocal.affine_target_iff",
+      "v": "PUnit.unit",
+      "kappa": -1.6601307189542474,
+      "deg_u": 9,
+      "deg_v": 17
+    },
+    {
+      "u": "ClassGroup.exists_mem_finsetApprox",
+      "v": "EuclideanDomain.div_add_mod",
+      "kappa": -1.6500000000000017,
+      "deg_u": 50,
+      "deg_v": 8
+    },
+    {
+      "u": "IsCompact.finite_compact_cover",
+      "v": "isOpen_biUnion",
+      "kappa": -1.65,
+      "deg_u": 16,
+      "deg_v": 20
+    },
+    {
+      "u": "And.intro",
+      "v": "ofSet_mem_analyticGroupoid",
+      "kappa": -1.6397515527950315,
+      "deg_u": 46,
+      "deg_v": 28
+    },
+    {
+      "u": "Subgroup.comap_injective",
+      "v": "imp_self",
+      "kappa": -1.6388888888888893,
+      "deg_u": 9,
+      "deg_v": 36
+    },
+    {
+      "u": "AlgebraicGeometry.PresheafedSpace.GlueData.ιInvApp_π",
+      "v": "Function.Injective.comp",
+      "kappa": -1.6388888888888893,
+      "deg_u": 28,
+      "deg_v": 18
+    },
+    {
+      "u": "MeasureTheory.Measure.restrict_sub_eq_restrict_sub_restrict",
+      "v": "le_add_right",
+      "kappa": -1.6366723259762312,
+      "deg_u": 31,
+      "deg_v": 19
+    },
+    {
+      "u": "aux₁",
+      "v": "interior_compl",
+      "kappa": -1.6363636363636354,
+      "deg_u": 33,
+      "deg_v": 11
+    },
+    {
+      "u": "Basis.prod_apply_inl_fst",
+      "v": "Sum.inl_injective",
+      "kappa": -1.6333333333333337,
+      "deg_u": 12,
+      "deg_v": 10
+    },
+    {
+      "u": "Batteries.RBNode.size_lt_depth",
+      "v": "Nat.lt_of_lt_of_le",
+      "kappa": -1.6333333333333333,
+      "deg_u": 10,
+      "deg_v": 12
+    },
+    {
+      "u": "Finset.prod_add",
+      "v": "True",
+      "kappa": -1.6250000000000004,
+      "deg_u": 28,
+      "deg_v": 16
+    },
+    {
+      "u": "Bornology.isVonNBounded_iff_tendsto_smallSets_nhds",
+      "v": "forall₂_congr",
+      "kappa": -1.6249999999999996,
+      "deg_u": 8,
+      "deg_v": 48
+    },
+    {
+      "u": "ContinuousMultilinearMap.norm_mkPiAlgebraFin_succ_le",
+      "v": "Multiset.prod_coe",
+      "kappa": -1.6239316239316244,
+      "deg_u": 18,
+      "deg_v": 26
+    },
+    {
+      "u": "Equiv.Perm.IsCycleOn.exists_pow_eq",
+      "v": "sub_eq_iff_eq_add'",
+      "kappa": -1.619195046439629,
+      "deg_u": 17,
+      "deg_v": 19
+    },
+    {
+      "u": "CategoryTheory.Epi",
+      "v": "IsProjective.iff_projective",
+      "kappa": -1.618181818181819,
+      "deg_u": 30,
+      "deg_v": 11
+    },
+    {
+      "u": "AlgHom.congr_fun",
+      "v": "CliffordAlgebraComplex.toComplex_involute",
+      "kappa": -1.6181818181818177,
+      "deg_u": 10,
+      "deg_v": 11
+    },
+    {
+      "u": "FirstOrder.Language.Ultraproduct.boundedFormula_realize_cast",
+      "v": "FirstOrder.Language.relMap_quotient_mk'",
+      "kappa": -1.6166666666666676,
+      "deg_u": 30,
+      "deg_v": 8
+    }
+  ],
+  "histogram": [
+    11,
+    42,
+    134,
+    189,
+    255,
+    324,
+    316,
+    352,
+    326,
+    276,
+    185,
+    182,
+    133,
+    98,
+    44,
+    434,
+    8,
+    10,
+    0,
+    1
+  ],
+  "histogram_edges": [
+    -1.7881773399014778,
+    -1.6716256157635467,
+    -1.5550738916256157,
+    -1.4385221674876847,
+    -1.3219704433497537,
+    -1.2054187192118226,
+    -1.0888669950738916,
+    -0.9723152709359606,
+    -0.8557635467980296,
+    -0.7392118226600985,
+    -0.6226600985221675,
+    -0.5061083743842365,
+    -0.3895566502463055,
+    -0.27300492610837446,
+    -0.15645320197044343,
+    -0.03990147783251241,
+    0.07665024630541861,
+    0.19320197044334964,
+    0.30975369458128066,
+    0.42630541871921146,
+    0.5428571428571429
+  ]
+}

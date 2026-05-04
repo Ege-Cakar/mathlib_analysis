@@ -1,0 +1,50 @@
+{
+  "hubs": [
+    "rfl",
+    "Eq.symm",
+    "mul_comm",
+    "mul_assoc",
+    "mul_one",
+    "one_mul",
+    "add_comm",
+    "le_antisymm",
+    "eq_comm",
+    "LE.le.trans",
+    "CategoryTheory.Category.assoc",
+    "Function.comp_apply",
+    "congr_arg",
+    "MulZeroClass.mul_zero",
+    "Iff.mp"
+  ],
+  "n_theorems": 57601,
+  "regression": [
+    {
+      "feature_set": "resistance_to_hubs",
+      "n_features": 15,
+      "test": {
+        "r2": 0.009532841346415077,
+        "pearson": 0.09849306294916867,
+        "rmse": 0.6920152868886886
+      }
+    },
+    {
+      "feature_set": "degree",
+      "n_features": 2,
+      "test": {
+        "r2": 0.5056833006007836,
+        "pearson": 0.7111572697515807,
+        "rmse": 0.48887551839730825
+      }
+    },
+    {
+      "feature_set": "resistance+degree",
+      "n_features": 17,
+      "test": {
+        "r2": 0.5065873827662591,
+        "pearson": 0.7117894835185056,
+        "rmse": 0.48842824854506833
+      }
+    }
+  ],
+  "n_eigenvectors_used": 64
+}

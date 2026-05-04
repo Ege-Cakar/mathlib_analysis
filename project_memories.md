@@ -41,6 +41,36 @@ exact (31k), refine (18k), simp_rw (11k), simpa (10k).
 
 ## Pipelines
 
+### `analysis/graph_geometry.py` — richer graph features (NEW 2026-05-04)
+
+Subcommands `node2vec`, `betweenness`, `resistance`, `curvature`, `joint`.
+Headline numbers on proof-length regression (target = log1p(tactic_count),
+n=57,601 theorems, 80/20 hash split):
+
+| Feature set | Test R² | Test ρ |
+|---|---|---|
+| degree | 0.506 | 0.711 |
+| spectral (low10+high10) | 0.003 | 0.052 |
+| **node2vec (64-d)** | **0.162** | **0.403** |
+| approx betweenness (200 sources) | 0.183 | 0.429 |
+| effective resistance to top-15 hubs | 0.005 | 0.074 |
+| **node2vec + degree** | **0.555** | **0.745** |
+| **all combined** | **0.565** | **0.752** |
+
+So node2vec is the geometric feature that *does* lift over degree — the
+spectral failure was about the encoding, not the graph.
+
+**Ollivier-Ricci curvature** on 3,320 sampled edges (filtered by
+neighbourhood size ≤ 50): mean κ = −0.781, median −0.840, **88.7 %
+negative**, 35.7 % below −1. The dep graph is hyperbolic / tree-like.
+Top bottleneck edges are atypical citations between semantically
+distant theorems.
+
+**Top hubs by indegree** (from the resistance subcommand): `rfl`
+(2,645), `Eq.symm` (1,493), `mul_comm` (1,462), `mul_assoc` (1,267),
+`mul_one`, `one_mul`, `add_comm`, `le_antisymm`, etc. — sane "fundamental
+lemma" list, sanity check on the graph.
+
 ### `analysis/state_hypergraph.py` — state-tactic hypergraph
 
 Built from LeanDojo `state_before` / `state_after`:

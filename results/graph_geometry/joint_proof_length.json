@@ -1,0 +1,59 @@
+{
+  "reports": [
+    {
+      "feature_set": "degree",
+      "n_features": 2,
+      "test": {
+        "r2": 0.5056834793985874,
+        "pearson": 0.7111572742289071,
+        "rmse": 0.488875429982455
+      }
+    },
+    {
+      "feature_set": "node2vec",
+      "n_features": 64,
+      "test": {
+        "r2": 0.1622343759820607,
+        "pearson": 0.4031183909163365,
+        "rmse": 0.636439192864137
+      }
+    },
+    {
+      "feature_set": "betweenness",
+      "n_features": 1,
+      "test": {
+        "r2": 0.18342878380031602,
+        "pearson": 0.42872133571506404,
+        "rmse": 0.628337069018036
+      }
+    },
+    {
+      "feature_set": "resistance",
+      "n_features": 15,
+      "test": {
+        "r2": 0.0052437063494518155,
+        "pearson": 0.07357195327856937,
+        "rmse": 0.693512025357173
+      }
+    },
+    {
+      "feature_set": "node2vec+degree",
+      "n_features": 66,
+      "test": {
+        "r2": 0.5552399937268921,
+        "pearson": 0.7451729907546589,
+        "rmse": 0.46372286686138303
+      }
+    },
+    {
+      "feature_set": "all_combined",
+      "n_features": 82,
+      "test": {
+        "r2": 0.565128794914088,
+        "pearson": 0.7517695528886544,
+        "rmse": 0.45853867767483864
+      }
+    }
+  ],
+  "n_theorems": 57601
+}

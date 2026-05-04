@@ -15,15 +15,22 @@ can we trace a path from one theorem to another along it.
   with communities aligning to Mathlib top-level areas; proof shapes are
   dominated by linear chains (50,191 of 61,544 proofs).
 - **Coarse structure predicts well**: out-degree alone explains
-  R² = 0.48 of the variance in proof length (Pearson 0.70). Cross-area
-  citation matrices and per-area tactic mixes both recover the
-  intuitive structure of Mathlib (CategoryTheory is 90 % self-citing,
-  Algebra is the universal sink, Analysis/Topology/MeasureTheory are
-  `have`-heavy, etc.).
-- **Spectral coordinates of the normalised adjacency don't help**: across
-  four predictive tasks (27-way category, link existence, tactic head,
-  proof length) the eigendecomposition adds essentially zero on top of
-  degree. This is a clean negative result.
+  R² = 0.48 of the variance in proof length (Pearson 0.70). Adding a
+  64-d node2vec embedding lifts this to **R² = 0.555**, and combining
+  degree + node2vec + approximate betweenness + effective resistance
+  gets to **R² = 0.565 (Pearson 0.752)**. Cross-area citation matrices
+  and per-area tactic mixes both recover the intuitive structure of
+  Mathlib (CategoryTheory is 90 % self-citing, Algebra is the universal
+  sink, Analysis/Topology/MeasureTheory are `have`-heavy, etc.).
+- **Eigencoordinates of the normalised adjacency don't carry information,
+  but other graph-geometric features do**: spectral features add 0.000 R²
+  on proof length, while node2vec (random-walk) embeddings add 0.049 R²
+  on the same task. So "the geometry helps" — it's just the
+  random-walk encoding, not the principal modes of the adjacency.
+- **The dep graph is hyperbolic**: 89 % of sampled edges have negative
+  Ollivier–Ricci curvature (mean κ = −0.78, median −0.84). The graph
+  is locally tree-like; this matches the power-law degree distribution
+  and the disjoint-proof-tree topology in § 3.5.
 - **A state-tactic hypergraph (261 k nodes, 18,467 true multi-output
   edges) is built and the path-finder works**, but goal-text equality is
   too strict to give a useful "find A → B" tool: even when B literally
@@ -247,7 +254,74 @@ depth 3, AND/OR discharge in 3 expansions). Across theorems it sees
 shared states only when two theorems' goal texts are literally equal,
 which is rare; see § 4.4.
 
-### 3.6 Post-cutoff prover holdout (built, not yet run)
+### 3.6 Richer graph-geometric features (the spectral rebuttal)
+
+The eigendecomposition of the normalised adjacency added nothing on top of
+degree (§ 4.1–4.3). Tonight we re-tested the same predictive task with
+three more graph-geometric features that have no reason to collapse to
+degree:
+
+| Feature set (proof-length regression) | n | Test R² | Test ρ |
+|---|---|---|---|
+| degree | 57,601 | 0.506 | 0.711 |
+| spectral (low10+high10), § 4.3 | 57,601 | 0.003 | 0.052 |
+| **node2vec (64-d, walks-per-node 10, length 40)** | 57,601 | **0.162** | **0.403** |
+| approximate betweenness (200 random sources) | 57,601 | 0.183 | 0.429 |
+| effective resistance to top-15 hubs (via 64 eigvecs) | 57,601 | 0.005 | 0.074 |
+| **node2vec + degree** | 57,601 | **0.555** | **0.745** |
+| **all combined (degree + node2vec + BC + resistance)** | 57,601 | **0.565** | **0.752** |
+
+So **node2vec is the geometric feature that *does* carry information**:
+on its own it reaches R² = 0.162 / ρ = 0.403 — the eigencoordinates of
+the same graph reach 0.003. Adding node2vec on top of degree lifts
+R² from 0.506 to 0.555 (+0.049 absolute, +9.7 % relative). Combining
+all four features gets R² = 0.565.
+
+Source: `analysis/graph_geometry.py`,
+`results/graph_geometry/node2vec_proof_length.json`,
+`results/graph_geometry/joint_proof_length.json`.
+
+The two extra side products are also worth keeping:
+
+**Top-hubs-by-indegree** (`results/graph_geometry/resistance_summary.json`)
+— sanity check that the dep graph is meaningful at the hub level:
+
+```
+rfl (in_deg 2,645), Eq.symm (1,493), mul_comm (1,462),
+mul_assoc (1,267), mul_one (1,171), one_mul (1,015),
+add_comm (950), le_antisymm (814), eq_comm (701),
+LE.le.trans (699), …
+```
+
+Exactly the basic algebra and equality lemmas one would expect at the
+foundation.
+
+**Ollivier–Ricci curvature** (`results/graph_geometry/ollivier_ricci.json`).
+Sampled 5,000 edges, kept 3,320 with neighbourhoods ≤ 50, computed
+κ(u, v) = 1 − W₁(unif N(u), unif N(v)) / d(u, v) by solving the
+transportation LP per edge with `scipy.optimize.linprog`:
+
+| Quantity | Value |
+|---|---|
+| edges evaluated | 3,320 |
+| mean κ | **−0.781** |
+| median κ | −0.840 |
+| min / max κ | −1.788 / +0.543 |
+| fraction κ < 0 | **88.7 %** |
+| fraction κ < −1 (strong bottleneck) | 35.7 % |
+
+Discrete Ricci curvature this strongly negative is the signature of a
+**hyperbolic / tree-like** graph. This is consistent with the heavy-
+tailed power-law degree distribution from § 2 and the proof-tree
+structure of the state graph (§ 3.5): citations radiate from a few
+hubs, locally the graph looks like a tree, and there is little
+triangle-rich "Euclidean" structure. The most negative-κ edges connect
+semantically distant theorems via atypical citations
+(e.g. `spectrum.map_polynomial_aeval_of_degree_pos ↔ symm`,
+`Finset.filter_val ↔ Nat.divisors_filter_squarefree`) — candidates for
+abstraction / refactor analysis.
+
+### 3.7 Post-cutoff prover holdout (built, not yet run)
 
 Source: `results/prover_eval/post_kimina_manifest.jsonl`,
 `results/prover_eval/post_kimina_manifest_stats.json`,
@@ -376,11 +450,18 @@ no path exists *under text equality*.
 ### 4.5 What to take from § 4
 
 The eigendecomposition of the dep-graph adjacency is not a useful node
-embedding for the predictive tasks we care about. The state-tactic
-hypergraph correctly implements the algorithm I wanted, but goal-text
-equality is too strict an equivalence to make the search useful for
-discovery on arbitrary pairs. Both negative results are clean and
-reproducible.
+embedding for the predictive tasks we care about — but this is not the
+same as "the graph carries no embeddable information". A *random-walk*
+embedding of the same graph (node2vec, § 3.6) does carry signal: R² on
+proof length goes from 0.003 (spectral) to 0.162 (node2vec) on the
+same target. The takeaway is that the principal modes of the
+normalised adjacency are dominated by degree, but the local
+neighbourhood structure that random walks see is real.
+
+The state-tactic hypergraph correctly implements the algorithm I
+wanted, but goal-text equality is too strict an equivalence to make
+the search useful for discovery on arbitrary pairs. Goal canonicalisation
+is the next concrete fix.
 
 ## 5. What's queued
 
@@ -413,21 +494,29 @@ In priority order — all are concrete extensions, not new directions:
 
 What we know:
 
-- The dep graph is a real object: heavy-tailed degree, 240 communities
-  at modularity 0.59, communities aligned with Mathlib's areas.
+- The dep graph is a real object: heavy-tailed degree (power law
+  α = 2.37), 240 communities at modularity 0.59, communities aligned
+  with Mathlib's areas, **predominantly hyperbolic Ollivier–Ricci
+  curvature** (mean κ = −0.78 over 3,320 sampled edges).
 - Coarse structural features predict proof difficulty: degree alone
-  hits R² = 0.48 / ρ = 0.70 on proof length, replicated in two
-  independent analyses this semester.
+  hits R² = 0.51 / ρ = 0.71 on proof length; **adding a node2vec
+  random-walk embedding lifts this to R² = 0.555, and combining all
+  graph-geometric features gets to R² = 0.565 (ρ = 0.752)**.
 - Cross-area citation patterns and per-area tactic mixes are
   interpretable and consistent with mathematical intuition.
 - A single 3-step BPE macro (`rw → [0] → exact`) accounts for ~8 k
   occurrences globally and is the top merge in every major area.
+- Top theorems by indegree: `rfl`, `Eq.symm`, `mul_comm`, `mul_assoc`,
+  `mul_one`, `one_mul`, `add_comm`, `le_antisymm` — the graph correctly
+  identifies the basic algebra/equality lemmas as foundational.
 
 What we know doesn't work:
 
 - The eigencoordinates of the normalised adjacency, taken naively, do
   not encode the area / link / tactic / difficulty information that
-  degree-and-namespace already carry.
+  degree-and-namespace already carry. **But a random-walk embedding
+  (node2vec) of the same graph does** — so the failure was the
+  encoding, not the underlying graph.
 - Path-finding under strict goal-text equality on the state graph
   cannot recover the bulk of the dep-graph's citations because of
   term-mode use, rewriting, and instantiation.
@@ -456,6 +545,7 @@ analysis/
   extra_experiments.py        # path-sweep, link-pred, tactic-pred (proof DAG)
   state_hypergraph.py         # state-tactic hypergraph, or-path, discharge, sweep
   predictive_extras.py        # proof-length regression, dep matrix, tactic-by-area
+  graph_geometry.py           # node2vec, betweenness, resistance, Ollivier-Ricci, joint
   kimina_eval_cuda.py         # CUDA-first vLLM runner (split generate/verify)
   kimina_eval.py              # legacy single-pass runner
 
@@ -463,7 +553,8 @@ results/
   paths/                       # proof-DAG outputs
   state_graph/                 # state-tactic hypergraph outputs
   spectral/                    # spectral coords + classifier sweeps
-  predictive/                  # tonight's regression + heatmaps
+  predictive/                  # proof-length regression + heatmaps
+  graph_geometry/              # node2vec, BC, resistance, OR curvature, joint
   prover_eval/                 # post-2025-08-14 manifest + prompts
 
 Old/data/                      # earlier-semester analyses (Mar–Apr 2026)
