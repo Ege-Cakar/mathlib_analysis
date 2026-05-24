@@ -19,6 +19,7 @@ data/leandojo/
 data/leantree/
 data/hypergraph_triples.jsonl
 data/hypergraph.json
+Old/
 
 # Keep stats (small summary)
 !data/hypergraph_stats.json
@@ -29,8 +30,14 @@ data/hypergraph.json
 # Generated result caches / large regenerable artifacts
 results/.DS_Store
 results/_matplotlib/
+results/report.aux
+results/report.fdb_latexmk
+results/report.fls
+results/report.log
+results/report.out
 results/paths/dependency_edges.jsonl
 results/paths/nodes.jsonl
+results/prover_eval/kimina_post_2025_08_14.jsonl
 results/spectral/spectral_features.csv
 results/state_graph/state_nodes.jsonl
 results/state_graph/state_hyperedges.jsonl
