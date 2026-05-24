@@ -1,0 +1,103 @@
+{
+  "degree_tail_ccdf": {
+    "n_positive_degree_nodes": 94635,
+    "max_degree": 2645,
+    "median_degree": 3.0,
+    "p90_degree": 13.0,
+    "p99_degree": 48.0,
+    "alpha": 2.370037014043187,
+    "xmin": 43.0
+  },
+  "proof_tree_depth_spread": {
+    "n_proofs": 61544,
+    "depth_mean": 2.814636682698557,
+    "depth_median": 2.0,
+    "depth_max": 38,
+    "depth_p90": 6.0,
+    "depth_p99": 14.0,
+    "width_mean": 1.273024177823996,
+    "width_median": 1.0,
+    "width_max": 23
+  },
+  "proof_length_r2": {
+    "spectral": 0.0025152982534802915,
+    "node2vec": 0.1622343759820607,
+    "degree": 0.4833138123882428,
+    "node2vec+degree": 0.5552399937268921,
+    "all graph geometry": 0.565128794914088
+  },
+  "category_prediction_accuracy": {
+    "majority": 0.16526610644257703,
+    "degree MLP": 0.17180205415499533,
+    "best spectral+degree": 0.17669028395671993,
+    "namespace prior": 0.7368045257318614
+  },
+  "pathfinding_reachability": {
+    "random proof-DAG pairs": 0.0005,
+    "cited dep. edges\nstate graph": 0.025
+  },
+  "proof_shape_distribution": {
+    "LINEAR": 50191,
+    "BALANCED": 5893,
+    "DEEP_NARROW": 4801,
+    "BUSHY": 655,
+    "WIDE_SHALLOW": 4
+  },
+  "ollivier_ricci_histogram": {
+    "histogram": [
+      11,
+      42,
+      134,
+      189,
+      255,
+      324,
+      316,
+      352,
+      326,
+      276,
+      185,
+      182,
+      133,
+      98,
+      44,
+      434,
+      8,
+      10,
+      0,
+      1
+    ],
+    "histogram_edges": [
+      -1.7881773399014778,
+      -1.6716256157635467,
+      -1.5550738916256157,
+      -1.4385221674876847,
+      -1.3219704433497537,
+      -1.2054187192118226,
+      -1.0888669950738916,
+      -0.9723152709359606,
+      -0.8557635467980296,
+      -0.7392118226600985,
+      -0.6226600985221675,
+      -0.5061083743842365,
+      -0.3895566502463055,
+      -0.27300492610837446,
+      -0.15645320197044343,
+      -0.03990147783251241,
+      0.07665024630541861,
+      0.19320197044334964,
+      0.30975369458128066,
+      0.42630541871921146,
+      0.5428571428571429
+    ]
+  },
+  "mathlib_vs_lean_github": {
+    "mean_proof_length": {
+      "Mathlib": 4.217795398414142,
+      "Lean-GitHub": 10.704587694414556
+    },
+    "unique_tactics": {
+      "Mathlib": 274,
+      "Lean-GitHub": 1093
+    }
+  }
+}

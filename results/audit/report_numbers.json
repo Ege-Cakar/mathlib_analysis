@@ -1,0 +1,1275 @@
+{
+  "current_dependency_graph": {
+    "theorems": 122517,
+    "theorems_with_traces": 61544,
+    "tactics": 259580,
+    "unique_dependency_edges": 309396,
+    "premise_occurrences": 418704,
+    "nodes": 138333,
+    "expected_unique_dependency_edges": 309396,
+    "matches_expected_unique_dependency_edges": true,
+    "top_source_categories": [
+      [
+        "Analysis",
+        42522
+      ],
+      [
+        "Algebra",
+        36287
+      ],
+      [
+        "Data",
+        34404
+      ],
+      [
+        "MeasureTheory",
+        29615
+      ],
+      [
+        "RingTheory",
+        24765
+      ],
+      [
+        "Topology",
+        22349
+      ],
+      [
+        "NumberTheory",
+        19093
+      ],
+      [
+        "LinearAlgebra",
+        16374
+      ],
+      [
+        "CategoryTheory",
+        12762
+      ],
+      [
+        "Order",
+        9891
+      ],
+      [
+        "GroupTheory",
+        8207
+      ],
+      [
+        "Combinatorics",
+        7804
+      ],
+      [
+        "Probability",
+        7486
+      ],
+      [
+        "Geometry",
+        6531
+      ],
+      [
+        "SetTheory",
+        5898
+      ],
+      [
+        "FieldTheory",
+        5869
+      ],
+      [
+        "AlgebraicGeometry",
+        5055
+      ],
+      [
+        "Computability",
+        3583
+      ],
+      [
+        "UNKNOWN",
+        3553
+      ],
+      [
+        "ModelTheory",
+        1752
+      ]
+    ],
+    "top_tactic_heads": [
+      [
+        "rw",
+        82813
+      ],
+      [
+        "simp",
+        52667
+      ],
+      [
+        "have",
+        34853
+      ],
+      [
+        "exact",
+        30878
+      ],
+      [
+        "refine",
+        18358
+      ],
+      [
+        "simp_rw",
+        11417
+      ],
+      [
+        "simpa",
+        9842
+      ],
+      [
+        "apply",
+        8802
+      ],
+      [
+        "obtain",
+        5934
+      ],
+      [
+        "suffices",
+        4814
+      ],
+      [
+        "classical",
+        4277
+      ],
+      [
+        "calc",
+        4261
+      ],
+      [
+        "induction",
+        3970
+      ],
+      [
+        "let",
+        3927
+      ],
+      [
+        "rwa",
+        3782
+      ],
+      [
+        "rcases",
+        3169
+      ],
+      [
+        "convert",
+        2830
+      ],
+      [
+        "cases",
+        2105
+      ],
+      [
+        "dsimp",
+        2077
+      ],
+      [
+        "erw",
+        1962
+      ]
+    ]
+  },
+  "current_state_graph": {
+    "theorems_indexed": 122517,
+    "theorems_with_traces": 61544,
+    "tactic_invocations": 259580,
+    "unique_states": 261655,
+    "unique_hyperedges": 261107,
+    "multi_output_hyperedges": 18467,
+    "output_size_histogram": {
+      "1": 242640,
+      "2": 15786,
+      "3": 1650,
+      "4": 689,
+      "5": 144,
+      "6": 75,
+      "7": 29,
+      "8": 33,
+      "9": 38,
+      "10": 2,
+      "12": 6,
+      "15": 1,
+      "17": 14
+    },
+    "top_tactic_heads_by_distinct_edges": [
+      [
+        "rw",
+        48939
+      ],
+      [
+        "simp",
+        33207
+      ],
+      [
+        "exact",
+        30736
+      ],
+      [
+        "have",
+        16872
+      ],
+      [
+        "refine",
+        14289
+      ],
+      [
+        "apply",
+        10045
+      ],
+      [
+        "intro",
+        8322
+      ],
+      [
+        "simpa",
+        7302
+      ],
+      [
+        "obtain",
+        6527
+      ],
+      [
+        "rcases",
+        5173
+      ],
+      [
+        "ext",
+        5150
+      ],
+      [
+        "rintro",
+        5035
+      ],
+      [
+        "simp_rw",
+        4800
+      ],
+      [
+        "rfl",
+        3932
+      ],
+      [
+        "rwa",
+        3215
+      ],
+      [
+        "let",
+        3212
+      ],
+      [
+        "by_cases",
+        2751
+      ],
+      [
+        "cases",
+        2654
+      ],
+      [
+        "convert",
+        2625
+      ],
+      [
+        "dsimp",
+        2518
+      ]
+    ]
+  },
+  "category_prediction": {
+    "n_train": 72753,
+    "n_test": 18207,
+    "majority": {
+      "accuracy": 0.16526610644257703,
+      "macro_f1": 0.010505698005698005,
+      "top3_accuracy": 0.19789092107431208
+    },
+    "namespace_prior": {
+      "accuracy": 0.7368045257318614,
+      "macro_f1": 0.7531971513545386,
+      "top3_accuracy": 0.7544900313066403
+    },
+    "best_accuracy": {
+      "feature_set": "low10+degree",
+      "model": "mlp",
+      "accuracy": 0.17669028395671993,
+      "macro_f1": 0.021284854707150438,
+      "top3_accuracy": 0.426813862800022
+    },
+    "best_macro_f1": {
+      "feature_set": "low32",
+      "model": "mlp",
+      "accuracy": 0.1556544186301972,
+      "macro_f1": 0.03199254781132491,
+      "top3_accuracy": 0.39556214642719834
+    }
+  },
+  "link_prediction": {
+    "degree_only": {
+      "acc": 0.7851053159478435,
+      "auc": 0.8748876871047786,
+      "epoch": 38
+    },
+    "spectral_full": {
+      "acc": 0.7891173520561685,
+      "auc": 0.8809483310653966,
+      "epoch": 1
+    }
+  },
+  "tactic_head_prediction": {
+    "majority": {
+      "accuracy": 0.33897045158892397,
+      "predicted_class": "rw"
+    },
+    "degree_only": {
+      "accuracy": 0.3494393854921638,
+      "macro_f1": 0.10287472954970889,
+      "epoch": 26
+    },
+    "spectral_concat": {
+      "accuracy": 0.34634206776931176,
+      "macro_f1": 0.11048466013063776,
+      "epoch": 0
+    }
+  },
+  "proof_length_prediction": {
+    "n_theorems": 61544,
+    "n_with_spectral": 57601,
+    "degree": {
+      "r2": 0.4833138123882428,
+      "pearson": 0.6952628493309021,
+      "rmse": 0.493330180644989
+    },
+    "spectral": {
+      "r2": 0.0025152982534802915,
+      "pearson": 0.05152595043182373,
+      "rmse": 0.6854525208473206
+    },
+    "degree_area_statement": {
+      "r2": 0.49804087142309206,
+      "pearson": 0.7057751417160034,
+      "rmse": 0.4862486720085144
+    },
+    "node2vec": {
+      "r2": 0.1622343759820607,
+      "pearson": 0.4031183909163365,
+      "rmse": 0.636439192864137
+    },
+    "node2vec_degree": {
+      "r2": 0.5552399937268921,
+      "pearson": 0.7451729907546589,
+      "rmse": 0.46372286686138303
+    },
+    "all_graph_geometry": {
+      "r2": 0.565128794914088,
+      "pearson": 0.7517695528886544,
+      "rmse": 0.45853867767483864
+    }
+  },
+  "curvature": {
+    "n_evaluated": 3320,
+    "mean_kappa": -0.7812147102454126,
+    "median_kappa": -0.8400000000000009,
+    "min_kappa": -1.7881773399014778,
+    "max_kappa": 0.5428571428571429,
+    "fraction_negative": 0.8867469879518072,
+    "fraction_below_threshold": 0.3566265060240964
+  },
+  "pathfinding": {
+    "proof_dag_random_pairs": {
+      "pair_total": 2000,
+      "found": 1,
+      "found_fraction": 0.0005,
+      "length_histogram": {
+        "5": 1
+      },
+      "length_mean_given_found": 5.0,
+      "length_median_given_found": 5.0
+    },
+    "state_graph_dep_edge_cross_validation": {
+      "pairs_tried": 1000,
+      "found": 25,
+      "found_fraction": 0.025,
+      "depth_histogram": {
+        "0": 11,
+        "1": 5,
+        "2": 3,
+        "3": 2,
+        "4": 1,
+        "5": 1,
+        "7": 1,
+        "10": 1
+      }
+    },
+    "state_graph_by_tactic_head": [
+      {
+        "tactic_head": "induction",
+        "n": 9,
+        "found": 1,
+        "rate": 0.1111111111111111
+      },
+      {
+        "tactic_head": "exact",
+        "n": 100,
+        "found": 11,
+        "rate": 0.11
+      },
+      {
+        "tactic_head": "refine",
+        "n": 54,
+        "found": 5,
+        "rate": 0.09259259259259259
+      },
+      {
+        "tactic_head": "have",
+        "n": 83,
+        "found": 3,
+        "rate": 0.03614457831325301
+      },
+      {
+        "tactic_head": "apply",
+        "n": 40,
+        "found": 1,
+        "rate": 0.025
+      },
+      {
+        "tactic_head": "simp",
+        "n": 129,
+        "found": 2,
+        "rate": 0.015503875968992248
+      },
+      {
+        "tactic_head": "rw",
+        "n": 359,
+        "found": 2,
+        "rate": 0.005571030640668524
+      },
+      {
+        "tactic_head": "simp_rw",
+        "n": 45,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "rcases",
+        "n": 6,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "simpa",
+        "n": 47,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "rwa",
+        "n": 16,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "suffices",
+        "n": 15,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "nth_rw",
+        "n": 5,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "erw",
+        "n": 10,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "classical",
+        "n": 11,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "convert",
+        "n": 14,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "obtain",
+        "n": 19,
+        "found": 0,
+        "rate": 0.0
+      },
+      {
+        "tactic_head": "calc",
+        "n": 10,
+        "found": 0,
+        "rate": 0.0
+      }
+    ]
+  },
+  "prover_eval": {
+    "post_kimina_manifest": {
+      "cutoff": "2025-08-14",
+      "base_commit": "3f11243a35b7291810cd419eddcf0f7ee2bbbf3a",
+      "changed_lean_files_scanned": 160,
+      "manifest_rows": 25,
+      "verify_sorry": true,
+      "category_counts": [
+        [
+          "Analysis",
+          3
+        ],
+        [
+          "Topology",
+          2
+        ],
+        [
+          "GroupTheory",
+          2
+        ],
+        [
+          "RingTheory",
+          2
+        ],
+        [
+          "Data",
+          2
+        ],
+        [
+          "Order",
+          2
+        ],
+        [
+          "NumberTheory",
+          2
+        ],
+        [
+          "Tactic",
+          2
+        ],
+        [
+          "Combinatorics",
+          2
+        ],
+        [
+          "Dynamics",
+          2
+        ],
+        [
+          "Algebra",
+          1
+        ],
+        [
+          "MeasureTheory",
+          1
+        ],
+        [
+          "LinearAlgebra",
+          1
+        ],
+        [
+          "Probability",
+          1
+        ]
+      ]
+    },
+    "kimina_generation_rows": 200,
+    "kimina_unique_theorems": 25,
+    "kimina_samples_per_theorem": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "kimina_verified_counts": {
+      "None": 200
+    },
+    "reprover_status": [
+      {
+        "status": "not_run",
+        "reason": "ReProver is not installed in this workspace",
+        "post_kimina_manifest": "results/prover_eval/post_kimina_manifest.jsonl",
+        "standard_baseline": "run ReProver documented LeanDojo Benchmark 4 eval in a ReProver checkout"
+      }
+    ]
+  },
+  "old_results": {
+    "theorem_graph": {
+      "n_nodes": 138333,
+      "n_edges": 309396,
+      "n_wcc": 44479,
+      "largest_wcc": 92594
+    },
+    "search_tree": {
+      "n_proofs": 61544,
+      "shape_distribution": {
+        "LINEAR": 50191,
+        "BALANCED": 5893,
+        "DEEP_NARROW": 4801,
+        "BUSHY": 655,
+        "WIDE_SHALLOW": 4
+      },
+      "depth_mean": 2.814636682698557,
+      "depth_median": 2.0,
+      "depth_max": 38,
+      "width_mean": 1.273024177823996,
+      "width_median": 1.0,
+      "width_max": 23,
+      "avg_branching_factor": 1.0420189422420982,
+      "avg_balancedness": 0.03107939578081202
+    },
+    "power_law_fit": {
+      "alpha": 2.370037014043187,
+      "xmin": 43.0,
+      "ks_statistic": 0.028140223792177177,
+      "n_tail": 864,
+      "n_total": 66603,
+      "lognormal": {
+        "mu": 4.479411362923186,
+        "sigma": 0.6758744725085278,
+        "ks": 0.14397262074514877,
+        "p": 4.3154905139902263e-16
+      },
+      "exponential": {
+        "lambda": 0.00819306813332701,
+        "ks": 0.31720946760174434,
+        "p": 8.473810269429239e-78
+      }
+    },
+    "difficulty": {
+      "n_matched": 61542,
+      "top_pearson": [
+        {
+          "diff": "proof_length",
+          "struct": "out_degree",
+          "r": 0.7606103319788975
+        },
+        {
+          "diff": "unique_tactics",
+          "struct": "out_degree",
+          "r": 0.7073381205568168
+        },
+        {
+          "diff": "tactic_diversity",
+          "struct": "out_degree",
+          "r": 0.6086293298215526
+        },
+        {
+          "diff": "max_branching",
+          "struct": "out_degree",
+          "r": 0.41753044223046126
+        },
+        {
+          "diff": "avg_state_complexity",
+          "struct": "out_degree",
+          "r": 0.37476101903336
+        },
+        {
+          "diff": "branching_factor",
+          "struct": "out_degree",
+          "r": 0.2562344404411022
+        }
+      ],
+      "top_spearman": [
+        {
+          "diff": "proof_length",
+          "struct": "out_degree",
+          "rho": 0.6237564906585825
+        },
+        {
+          "diff": "unique_tactics",
+          "struct": "out_degree",
+          "rho": 0.6069990363433156
+        },
+        {
+          "diff": "tactic_diversity",
+          "struct": "out_degree",
+          "rho": 0.5898617061303049
+        },
+        {
+          "diff": "max_branching",
+          "struct": "out_degree",
+          "rho": 0.4189554965376168
+        },
+        {
+          "diff": "branching_factor",
+          "struct": "out_degree",
+          "rho": 0.39520051370087467
+        },
+        {
+          "diff": "avg_state_complexity",
+          "struct": "out_degree",
+          "rho": 0.3633317554858413
+        }
+      ],
+      "linear_r2": 0.5789278750050191,
+      "logistic_accuracy": 0.7792836398838335,
+      "median_proof_length": 2.0
+    },
+    "comparative": {
+      "Mathlib": {
+        "n_theorems": 61544,
+        "n_unique_tactics": 274,
+        "n_total_tactics": 259580,
+        "n_dep_nodes": 94635,
+        "n_dep_edges": 309396,
+        "proof_length_mean": 4.217795398414142,
+        "proof_length_median": 2.0,
+        "proof_length_max": 128,
+        "top_10_tactics": [
+          [
+            "rw",
+            48990
+          ],
+          [
+            "simp",
+            33294
+          ],
+          [
+            "exact",
+            30785
+          ],
+          [
+            "have",
+            16876
+          ],
+          [
+            "refine",
+            14292
+          ],
+          [
+            "apply",
+            10032
+          ],
+          [
+            "intro",
+            8321
+          ],
+          [
+            "simpa",
+            7321
+          ],
+          [
+            "obtain",
+            6526
+          ],
+          [
+            "rcases",
+            5173
+          ]
+        ]
+      },
+      "LEAN-GitHub": {
+        "n_theorems": 20446,
+        "n_unique_tactics": 1093,
+        "n_total_tactics": 218866,
+        "n_dep_nodes": 0,
+        "n_dep_edges": 0,
+        "proof_length_mean": 10.704587694414556,
+        "proof_length_median": 4.0,
+        "proof_length_max": 640,
+        "top_10_tactics": [
+          [
+            "simp",
+            30315
+          ],
+          [
+            "rw",
+            25211
+          ],
+          [
+            "exact",
+            20998
+          ],
+          [
+            "have",
+            18967
+          ],
+          [
+            "apply",
+            15609
+          ],
+          [
+            "intro",
+            12459
+          ],
+          [
+            "case",
+            5153
+          ],
+          [
+            ".",
+            4573
+          ],
+          [
+            "cases",
+            4223
+          ],
+          [
+            "rcases",
+            3876
+          ]
+        ]
+      }
+    },
+    "community": {
+      "n_communities": 240,
+      "modularity": 0.5923870045138631,
+      "top_communities": [
+        {
+          "id": 202,
+          "size": 15488,
+          "dominant_module": "Algebra",
+          "density": 0.00022383642745955418,
+          "top_modules": [
+            [
+              "Algebra",
+              4750
+            ],
+            [
+              "RingTheory",
+              3245
+            ],
+            [
+              "Data",
+              1874
+            ],
+            [
+              "NumberTheory",
+              1351
+            ],
+            [
+              "Analysis",
+              856
+            ]
+          ]
+        },
+        {
+          "id": 108,
+          "size": 14737,
+          "dominant_module": "Analysis",
+          "density": 0.0002451230135144783,
+          "top_modules": [
+            [
+              "Analysis",
+              3893
+            ],
+            [
+              "MeasureTheory",
+              3249
+            ],
+            [
+              "Topology",
+              2179
+            ],
+            [
+              "Data",
+              1383
+            ],
+            [
+              "Algebra",
+              1105
+            ]
+          ]
+        },
+        {
+          "id": 34,
+          "size": 11525,
+          "dominant_module": "Data",
+          "density": 0.00019633457592228536,
+          "top_modules": [
+            [
+              "Data",
+              3712
+            ],
+            [
+              "Algebra",
+              1260
+            ],
+            [
+              "Combinatorics",
+              1122
+            ],
+            [
+              "Order",
+              977
+            ],
+            [
+              ".lake",
+              588
+            ]
+          ]
+        },
+        {
+          "id": 115,
+          "size": 8600,
+          "dominant_module": "LinearAlgebra",
+          "density": 0.0002415910990190855,
+          "top_modules": [
+            [
+              "LinearAlgebra",
+              2264
+            ],
+            [
+              "Algebra",
+              2242
+            ],
+            [
+              "Data",
+              669
+            ],
+            [
+              "Analysis",
+              596
+            ],
+            [
+              "RingTheory",
+              556
+            ]
+          ]
+        },
+        {
+          "id": 45,
+          "size": 8587,
+          "dominant_module": "CategoryTheory",
+          "density": 0.00026364481263029823,
+          "top_modules": [
+            [
+              "CategoryTheory",
+              5104
+            ],
+            [
+              "Algebra",
+              1615
+            ],
+            [
+              "AlgebraicGeometry",
+              428
+            ],
+            [
+              "Topology",
+              394
+            ],
+            [
+              "AlgebraicTopology",
+              275
+            ]
+          ]
+        },
+        {
+          "id": 163,
+          "size": 5122,
+          "dominant_module": "Topology",
+          "density": 0.0003321799107441387,
+          "top_modules": [
+            [
+              "Topology",
+              2387
+            ],
+            [
+              "Order",
+              969
+            ],
+            [
+              "Data",
+              570
+            ],
+            [
+              "Analysis",
+              351
+            ],
+            [
+              "MeasureTheory",
+              228
+            ]
+          ]
+        }
+      ]
+    },
+    "spectral": {
+      "lambda_0": 1.4455589113873098e-13,
+      "algebraic_connectivity": 0.3298697024391116,
+      "lambda_2": 0.3740466779707286,
+      "spectral_gap": 0.3298697024391116,
+      "lambda_ratio": 1.1339225009298066,
+      "cheeger_lower": 0.1649348512195558,
+      "cheeger_upper": 0.8122434394183946,
+      "normalized_lambda1": 0.07234786719710264,
+      "max_eigenvalue_computed": 0.6772238866353901,
+      "n_eigenvalues": 20
+    },
+    "legacy_hypergraph": {
+      "total_triples": 40000,
+      "leandojo_triples": 20000,
+      "leantree_triples": 20000,
+      "unique_states": 40695,
+      "unique_hyperedges": 39532,
+      "multi_output_edges": 1349,
+      "top_tactics": [
+        [
+          "rw",
+          5450
+        ],
+        [
+          "simp",
+          4492
+        ],
+        [
+          "exact",
+          3621
+        ],
+        [
+          "intro",
+          3074
+        ],
+        [
+          "linarith",
+          2305
+        ],
+        [
+          "have",
+          2103
+        ],
+        [
+          "norm_num",
+          1901
+        ],
+        [
+          "refine",
+          1373
+        ],
+        [
+          "apply",
+          1149
+        ],
+        [
+          "simp_all",
+          1039
+        ],
+        [
+          "omega",
+          978
+        ],
+        [
+          "simpa",
+          886
+        ],
+        [
+          "rintro",
+          763
+        ],
+        [
+          "obtain",
+          574
+        ],
+        [
+          "subst",
+          571
+        ],
+        [
+          "refine'",
+          569
+        ],
+        [
+          "nlinarith",
+          498
+        ],
+        [
+          "rcases",
+          468
+        ],
+        [
+          "let",
+          456
+        ],
+        [
+          "ext",
+          452
+        ],
+        [
+          "constructor",
+          445
+        ],
+        [
+          "simp_rw",
+          409
+        ],
+        [
+          "rfl",
+          398
+        ],
+        [
+          "use",
+          388
+        ],
+        [
+          "ring_nf",
+          379
+        ],
+        [
+          "dsimp",
+          304
+        ],
+        [
+          "field_simp",
+          290
+        ],
+        [
+          "aesop",
+          288
+        ],
+        [
+          "by_cases",
+          232
+        ],
+        [
+          "rwa",
+          231
+        ]
+      ]
+    },
+    "top_bpe_macros": [
+      {
+        "step": 1,
+        "macro": "rw -> [0] -> exact",
+        "delta_C": 4370.800695678977,
+        "occurrences": 7895
+      },
+      {
+        "step": 2,
+        "macro": "have -> [0] -> rw",
+        "delta_C": 1432.6975499031194,
+        "occurrences": 2166
+      },
+      {
+        "step": 3,
+        "macro": "ext -> [0] -> simp",
+        "delta_C": 1230.3250141101855,
+        "occurrences": 1798
+      },
+      {
+        "step": 4,
+        "macro": "have -> [0] -> have",
+        "delta_C": 1207.9636369615812,
+        "occurrences": 2372
+      },
+      {
+        "step": 5,
+        "macro": "rw -> [0] -> simp",
+        "delta_C": 1194.9444281050794,
+        "occurrences": 2156
+      },
+      {
+        "step": 6,
+        "macro": "rw -> [0] -> refine",
+        "delta_C": 1110.0547433067493,
+        "occurrences": 1604
+      },
+      {
+        "step": 7,
+        "macro": "rw -> [0] -> apply",
+        "delta_C": 951.6381484540594,
+        "occurrences": 1487
+      },
+      {
+        "step": 8,
+        "macro": "refine -> [0] -> rw",
+        "delta_C": 812.9739507194168,
+        "occurrences": 1182
+      },
+      {
+        "step": 9,
+        "macro": "simp -> [0] -> exact",
+        "delta_C": 727.1216758127712,
+        "occurrences": 1183
+      },
+      {
+        "step": 10,
+        "macro": "rw -> [0] -> rfl",
+        "delta_C": 655.5171163457495,
+        "occurrences": 1048
+      }
+    ],
+    "shortcut_summary": {
+      "n": 500,
+      "max_steps_saved": 122,
+      "top_examples": [
+        {
+          "theorem": "AkraBazziRecurrence.GrowsPolynomially.add_isLittleO",
+          "human_length": 126,
+          "optimal_length": 4,
+          "steps_saved": 122,
+          "optimal_route": [
+            "intro b hb (via AkraBazziRecurrence.GrowsPolynomially.add_isLittleO)",
+            "have hb_ub := hb.2 (via AkraBazziRecurrence.GrowsPolynomially.add_isLittleO)",
+            "rw [isLittleO_iff] at hfg (via AkraBazziRecurrence.GrowsPolynomially.add_isLittleO)",
+            "cases hf.eventually_atTop_nonneg_or_nonpos with\n|  (via AkraBazziRecurrence.GrowsPolynomially.add_isLittleO)"
+          ]
+        },
+        {
+          "theorem": "AkraBazziRecurrence.GrowsPolynomially.eventually_atTop_nonneg_or_nonpos",
+          "human_length": 105,
+          "optimal_length": 2,
+          "steps_saved": 103,
+          "optimal_route": [
+            "obtain ⟨c₁, _, c₂, _, h⟩ := hf (1/2) (by norm_num) (via AkraBazziRecurrence.GrowsPolynomially.eventually_atTop_nonneg_or_nonpos)",
+            "match lt_trichotomy c₁ c₂ with\n| .inl hlt => left\n (via AkraBazziRecurrence.GrowsPolynomially.eventually_atTop_nonneg_or_nonpos)"
+          ]
+        },
+        {
+          "theorem": "AkraBazziRecurrence.T_isBigO_smoothingFn_mul_asympBound",
+          "human_length": 81,
+          "optimal_length": 1,
+          "steps_saved": 80,
+          "optimal_route": [
+            "exact R.T_isBigO_smoothingFn_mul_asympBound (via AkraBazziRecurrence.isBigO_asympBound)"
+          ]
+        },
+        {
+          "theorem": "AkraBazziRecurrence.eventually_atTop_sumTransform_le",
+          "human_length": 87,
+          "optimal_length": 9,
+          "steps_saved": 78,
+          "optimal_route": [
+            "obtain ⟨c₁, hc₁_mem, hc₁⟩ := R.exists_eventually_c (via AkraBazziRecurrence.eventually_atTop_sumTransform_le)",
+            "obtain ⟨c₂, hc₂_mem, hc₂⟩ := R.g_grows_poly.eventu (via AkraBazziRecurrence.eventually_atTop_sumTransform_le)",
+            "have hc₁_pos : 0 < c₁ := hc₁_mem.1 (via AkraBazziRecurrence.eventually_atTop_sumTransform_le)",
+            "refine ⟨max c₂ (c₂ / c₁ ^ (p a b + 1)), by positiv (via AkraBazziRecurrence.eventually_atTop_sumTransform_le)",
+            "filter_upwards [hc₁, hc₂, R.eventually_r_pos, R.ev (via AkraBazziRecurrence.eventually_atTop_sumTransform_le)",
+            "intro i (via AkraBazziRecurrence.eventually_atTop_sumTransform_le)",
+            "have hrpos_i := hrpos i (via AkraBazziRecurrence.eventually_atTop_sumTransform_le)",
+            "have g_nonneg : 0 ≤ g n := R.g_nonneg n (by positi (via AkraBazziRecurrence.eventually_atTop_sumTransform_le)",
+            "cases le_or_lt 0 (p a b + 1) with\n| inl hp => calc (via AkraBazziRecurrence.eventually_atTop_sumTransform_le)"
+          ]
+        },
+        {
+          "theorem": "Turing.ToPartrec.Code.exists_code",
+          "human_length": 70,
+          "optimal_length": 1,
+          "steps_saved": 69,
+          "optimal_route": [
+            "exact ⟨zero', fun ⟨[], _⟩ => rfl⟩ (via Turing.ToPartrec.Code.exists_code)"
+          ]
+        }
+      ]
+    }
+  },
+  "old_files_not_used_in_headline_claims": [
+    "Old/data/optimality_ranking.json",
+    "Old/data/abstraction_candidates.json",
+    "Old/data/frequent_subgoals.json",
+    "Old/data/frequent_transitions.json",
+    "Old/data/identical_state_tactic_clusters.json"
+  ]
+}
