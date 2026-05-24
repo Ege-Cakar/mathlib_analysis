@@ -483,25 +483,32 @@ predicts not only human proof length but also machine-prover difficulty. A
 negative result would be equally useful, because it would separate
 graph-theoretic difficulty from model-specific failure modes.
 
-Second, the state graph should be expanded from tactic-level transitions into a
-much larger proof-transformation graph. Tactics such as \texttt{rw} and
-\texttt{exact} hide substantial elaborator work. A \texttt{rw} step searches
-for rewrite rules, matches a left- or right-hand side inside the current goal,
-instantiates implicit arguments, rewrites a subterm, and discharges side
-conditions. An \texttt{exact} step checks that a term inhabits the target type,
-again using elaboration, unification, coercions, typeclass search, and implicit
-argument inference. Treating each of these as a single edge is convenient, but
-it compresses away precisely the structure needed for abstraction discovery.
+Second, the state graph should be expanded from tactic-level transitions into
+the underlying proof-transformation graph on which tactics operate. The main
+object to unpack is not the tactic head itself, but the sequence of semantic
+operations hidden by automation. For \texttt{simp}, this means exposing the
+selected simp lemmas, rewrite directions, matched subterms, instantiated
+variables, congruence steps, generated side conditions, and recursive
+simplification subgoals. For \texttt{rw}, the step is less a search procedure
+than a specified rewrite; the useful expansion is therefore the matched
+occurrence, direction, instantiated theorem schema, and side goals. For
+\texttt{exact}, the relevant operation is type-checking and elaboration of a
+proposed term against the target, so the graph should expose the elaborated
+proof term and unification constraints rather than treat \texttt{exact} as an
+abstraction candidate.
 
-Unrolling these tactic internals would produce a larger graph whose nodes are
-not only proof states but also matched subterms, instantiated theorem schemas,
-unification constraints, generated side goals, and elaborated proof terms. In
-that graph, repeated motifs could correspond to genuine proof abstractions:
-common rewrite chains, recurring side-condition patterns, or proof-term
-fragments that appear across unrelated files. Such motifs are stronger
-candidates for new lemmas than surface-level tactic n-grams, because they would
-expose the semantic operation hidden behind tactics like \texttt{rw},
-\texttt{simp}, and \texttt{exact}.
+This lower-level graph would have nodes for proof states, subterms,
+instantiated theorem schemas, generated side goals, elaborated proof terms, and
+unification constraints. Edges would record primitive transformations such as
+rewriting a matched subterm, discharging a side condition, applying congruence,
+or checking that a term inhabits the current target. New theorem search could
+then be posed as verified graph compression: find repeated subgraphs across
+unrelated proofs, synthesize a candidate lemma or theorem schema that
+summarizes the repeated transformation, replace the repeated subgraph by a call
+to that candidate, and count it only if Lean verifies the new declaration and
+the modified proofs. This is the natural version of abstraction discovery for
+Mathlib, because it searches over the proof operations that tactics actually
+performed rather than over surface-level tactic n-grams.
 
 \section{Conclusion}
 
