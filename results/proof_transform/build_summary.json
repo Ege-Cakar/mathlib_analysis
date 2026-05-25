@@ -1,0 +1,15 @@
+{
+  "theorems": 43,
+  "total_nodes": 120,
+  "total_edges": 73,
+  "edges_by_kind": {
+    "simp_bundle": 22,
+    "rewrite_step": 21,
+    "structural": 19,
+    "term": 6,
+    "decision_opaque": 3,
+    "simp_step": 2
+  },
+  "match_mode": "state",
+  "out": "/Users/egecakar/Documents/Research/MWM/results/proof_transform/theorem_dags.jsonl"
+}

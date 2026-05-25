@@ -1,0 +1,22 @@
+[project]
+name = "mwm-leandojo-worker"
+version = "0.1.0"
+description = "LeanDojo Dojo-replay worker for the MWM proof-transformation pipeline."
+readme = "README.md"
+requires-python = ">=3.13"
+
+# LeanDojo only supports Python 3.13+ at the time of writing. The worker
+# lives in its own venv so the rest of the MWM analysis can stay on
+# 3.10+ (matplotlib / scipy ABIs are settled there). All comms with the
+# worker go through JSONL files; no Python imports cross the venv
+# boundary.
+dependencies = [
+    "lean-dojo>=4.20.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []

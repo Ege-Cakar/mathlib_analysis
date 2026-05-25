@@ -1,0 +1,184 @@
+{
+  "theorems": 43,
+  "path_occurrences_total": 54,
+  "subtree_occurrences_total": 0,
+  "unique_path_signatures": 54,
+  "unique_subtree_signatures": 0,
+  "candidates_after_filter": 54,
+  "config": {
+    "min_edges": 2,
+    "max_edges": 6,
+    "max_tree_edges": 5,
+    "min_support": 1,
+    "min_distinct_theorems": 1,
+    "min_gain": -10,
+    "include_paths": true,
+    "include_trees": true
+  },
+  "outputs": {
+    "all_motifs": "/Users/egecakar/Documents/Research/MWM/results/proof_transform/subgraph_motifs.jsonl",
+    "top_motifs": "/Users/egecakar/Documents/Research/MWM/results/proof_transform/subgraph_motifs_top.json"
+  },
+  "top_excerpt": [
+    {
+      "candidate_id": "submot:01be5a10af27ba3fbb",
+      "motif_kind": "path",
+      "edge_count": 4,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:04c094dc4cd1e3b6bb",
+      "motif_kind": "path",
+      "edge_count": 3,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:0e37ca6090b5c769e6",
+      "motif_kind": "path",
+      "edge_count": 5,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:122cef0ff46291594d",
+      "motif_kind": "path",
+      "edge_count": 5,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:14dd547ec7b4540ecf",
+      "motif_kind": "path",
+      "edge_count": 4,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:1cdec69b43e85f2aa0",
+      "motif_kind": "path",
+      "edge_count": 3,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:203b9a81da73ef9489",
+      "motif_kind": "path",
+      "edge_count": 2,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:207dad764e8a38b024",
+      "motif_kind": "path",
+      "edge_count": 2,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:2621040a8f76c5d8a6",
+      "motif_kind": "path",
+      "edge_count": 2,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:31d6057c547eac2d9d",
+      "motif_kind": "path",
+      "edge_count": 2,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:35ba227d4826fbae22",
+      "motif_kind": "path",
+      "edge_count": 2,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:3c2ea44fe3e71c905d",
+      "motif_kind": "path",
+      "edge_count": 2,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:466b310ff67e528e18",
+      "motif_kind": "path",
+      "edge_count": 2,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:49f88885db10b753be",
+      "motif_kind": "path",
+      "edge_count": 2,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:50af29cfdfffb3b3d6",
+      "motif_kind": "path",
+      "edge_count": 2,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:539557d7e57d36db73",
+      "motif_kind": "path",
+      "edge_count": 2,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:553365eee4d35f6d43",
+      "motif_kind": "path",
+      "edge_count": 3,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:57727530a390e50b5c",
+      "motif_kind": "path",
+      "edge_count": 3,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:5c91a0251300ca36b3",
+      "motif_kind": "path",
+      "edge_count": 2,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    },
+    {
+      "candidate_id": "submot:5fbb78f53fb7720d51",
+      "motif_kind": "path",
+      "edge_count": 2,
+      "support": 1,
+      "distinct_theorems": 1,
+      "complexity_gain": -1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "records": 50,
+  "errors": 13,
+  "edges": 73,
+  "n_unrolled_edges_total": 23,
+  "fallback_count": 22,
+  "edges_by_kind": {
+    "simp_bundle": 22,
+    "rewrite_step": 21,
+    "structural": 19,
+    "term": 6,
+    "decision_opaque": 3,
+    "simp_step": 2
+  },
+  "smoke_test_input": "/Users/egecakar/Documents/Research/MWM/results/proof_transform/enriched_traces.jsonl",
+  "note": "50-theorem stratified-by-file smoke test from Mathlib/Data/Nat/Defs.lean and related"
+}

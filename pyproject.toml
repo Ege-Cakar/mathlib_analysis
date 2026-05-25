@@ -1,0 +1,45 @@
+[project]
+name = "mwm"
+version = "0.1.0"
+description = "Mathlib as a Geometry of Mathematics — empirical study of formal proof graphs"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+authors = [{ name = "Ege Cakar" }]
+license = { text = "MIT" }
+
+# Core analysis dependencies. The proof_transform_graph rewrite uses only
+# stdlib; everything below supports the other analyses in this repo
+# (overnight_geometry, graph_geometry, spectral, predictive, figures).
+dependencies = [
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+    "scipy>=1.11",
+    "networkx>=3.2",
+    "gensim>=4.3",
+    "scikit-learn>=1.3",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+# GPU / theorem-prover evaluation (kimina_eval_cuda.py). Heavy; install
+# only on nodes that actually do prover evaluation.
+gpu = [
+    "torch>=2.2",
+    "transformers>=4.40",
+    "vllm>=0.5",
+    "accelerate>=0.30",
+]
+
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+# This repo is a script collection, not an importable library. Tell
+# setuptools so `pip install -e .` doesn't try to package everything.
+py-modules = []

@@ -6,9 +6,16 @@ __pycache__/
 
 # Virtual environments
 .venv/
+.venv-leandojo/
 .venv-mwm/
 .venv-gpu/
 .myvenv/
+
+# Local toolchain installs
+.elan/
+
+# uv / pip lock files we don't track (regenerated from pyproject.toml)
+uv.lock
 
 # Claude internal worktrees / session state
 .claude/

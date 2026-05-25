@@ -1,0 +1,273 @@
+[
+  {
+    "candidate_id": "submot:01be5a10af27ba3fbb",
+    "motif_kind": "path",
+    "edge_count": 4,
+    "node_count": 5,
+    "support": 1,
+    "distinct_theorems": 1,
+    "distinct_files": 1,
+    "categories": {
+      "Data": 1
+    },
+    "complexity_gain": -1,
+    "signature": "01be5a10af27ba3fbbd411eb",
+    "edge_labels": [
+      {
+        "kind": "simp_bundle",
+        "head": "rw",
+        "lemma_tuple": [
+          "if_neg"
+        ],
+        "direction_tuple": []
+      },
+      {
+        "kind": "rewrite_step",
+        "head": "rw",
+        "lemma_tuple": [
+          "add_succ"
+        ],
+        "direction_tuple": [
+          "fwd"
+        ]
+      },
+      {
+        "kind": "rewrite_step",
+        "head": "rw",
+        "lemma_tuple": [
+          "choose_succ_succ"
+        ],
+        "direction_tuple": [
+          "fwd"
+        ]
+      },
+      {
+        "kind": "rewrite_step",
+        "head": "rw",
+        "lemma_tuple": [
+          "succ_add_eq_add_succ"
+        ],
+        "direction_tuple": [
+          "fwd"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "theorem": "Nat.binomial_succ_succ",
+        "file_path": "Mathlib/Data/Nat/Choose/Multinomial.lean",
+        "category": "Data",
+        "edge_indices": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "node_keys": [
+          "bb196fa595630590",
+          "c0e7a977b28b985d",
+          "04242b85cd4e97ea",
+          "f8170b19931ec0f1",
+          "7ce3ec56da48a4d5"
+        ],
+        "tactic_chain": [
+          "rw [if_neg h.symm]",
+          "rw [add_succ]",
+          "rw [choose_succ_succ]",
+          "rw [succ_add_eq_add_succ]"
+        ],
+        "tactic_range": [
+          1,
+          2
+        ],
+        "state_excerpts": [
+          "α : Type u_1 s : Finset α f : α → ℕ a b : α n : ℕ inst✝ : DecidableEq α h : a ≠ b ⊢ ((f a).succ + (f b).succ).choose (f a).succ = ((f a).succ + if b = a then (f a).succ else f b).choose (f a).succ + (f a + (f b).succ).ch",
+          "α : Type u_1 s : Finset α f : α → ℕ a b : α n : ℕ inst✝ : DecidableEq α h : a ≠ b ⊢ ((f a).succ + (f b).succ).choose (f a).succ = ((f a).succ + f b).choose (f a).succ + (f a + (f b).succ).choose (f a)",
+          "α : Type u_1 s : Finset α f : α → ℕ a b : α n : ℕ inst✝ : DecidableEq α h : a ≠ b ⊢ ((f a).succ + f b).succ.choose (f a).succ = ((f a).succ + f b).choose (f a).succ + (f a + (f b).succ).choose (f a)",
+          "α : Type u_1 s : Finset α f : α → ℕ a b : α n : ℕ inst✝ : DecidableEq α h : a ≠ b ⊢ ((f a).succ + f b).choose (f a) + ((f a).succ + f b).choose (f a).succ = ((f a).succ + f b).choose (f a).succ + (f a + (f b).succ).choos",
+          "α : Type u_1 s : Finset α f : α → ℕ a b : α n : ℕ inst✝ : DecidableEq α h : a ≠ b ⊢ (f a + (f b).succ).choose (f a) + (f a + (f b).succ).choose (f a).succ = (f a + (f b).succ).choose (f a).succ + (f a + (f b).succ).choos"
+        ]
+      }
+    ],
+    "verification_status": "candidate_from_existing_verified_proofs_not_new_lean_declaration"
+  },
+  {
+    "candidate_id": "submot:04c094dc4cd1e3b6bb",
+    "motif_kind": "path",
+    "edge_count": 3,
+    "node_count": 4,
+    "support": 1,
+    "distinct_theorems": 1,
+    "distinct_files": 1,
+    "categories": {
+      "Data": 1
+    },
+    "complexity_gain": -1,
+    "signature": "04c094dc4cd1e3b6bbeb0c93",
+    "edge_labels": [
+      {
+        "kind": "structural",
+        "head": "have",
+        "lemma_tuple": [
+          "Nat.cast_ne_zero",
+          "Nat.factorial_ne_zero"
+        ],
+        "direction_tuple": []
+      },
+      {
+        "kind": "simp_bundle",
+        "head": "rw",
+        "lemma_tuple": [
+          "eq_div_iff_mul_eq",
+          "mul_ne_zero"
+        ],
+        "direction_tuple": []
+      },
+      {
+        "kind": "simp_bundle",
+        "head": "rw_mod_cast",
+        "lemma_tuple": [
+          "Nat.choose_mul_factorial_mul_factorial",
+          "mul_assoc"
+        ],
+        "direction_tuple": []
+      }
+    ],
+    "examples": [
+      {
+        "theorem": "Nat.cast_choose",
+        "file_path": "Mathlib/Data/Nat/Choose/Cast.lean",
+        "category": "Data",
+        "edge_indices": [
+          0,
+          1,
+          2
+        ],
+        "node_keys": [
+          "7b5bcd65d1619a83",
+          "c6c06b23838afca8",
+          "696770b9eba5e831",
+          "NOGOALS__________"
+        ],
+        "tactic_chain": [
+          "have : ∀ {n : ℕ}, (n ! : K) ≠ 0 := Nat.cast_ne_zero.2 (factorial_ne_zero _)",
+          "rw [eq_div_iff_mul_eq (mul_ne_zero this this)]",
+          "rw_mod_cast [← mul_assoc, choose_mul_factorial_mul_factorial h]"
+        ],
+        "tactic_range": [
+          0,
+          2
+        ],
+        "state_excerpts": [
+          "K : Type u_1 inst✝¹ : DivisionRing K inst✝ : CharZero K a b : ℕ h : a ≤ b ⊢ ↑(b.choose a) = ↑b ! / (↑a ! * ↑(b - a)!)",
+          "K : Type u_1 inst✝¹ : DivisionRing K inst✝ : CharZero K a b : ℕ h : a ≤ b this : ∀ {n : ℕ}, ↑n ! ≠ 0 ⊢ ↑(b.choose a) = ↑b ! / (↑a ! * ↑(b - a)!)",
+          "K : Type u_1 inst✝¹ : DivisionRing K inst✝ : CharZero K a b : ℕ h : a ≤ b this : ∀ {n : ℕ}, ↑n ! ≠ 0 ⊢ ↑(b.choose a) * (↑a ! * ↑(b - a)!) = ↑b !",
+          "no goals"
+        ]
+      }
+    ],
+    "verification_status": "candidate_from_existing_verified_proofs_not_new_lean_declaration"
+  },
+  {
+    "candidate_id": "submot:0e37ca6090b5c769e6",
+    "motif_kind": "path",
+    "edge_count": 5,
+    "node_count": 6,
+    "support": 1,
+    "distinct_theorems": 1,
+    "distinct_files": 1,
+    "categories": {
+      "Data": 1
+    },
+    "complexity_gain": -1,
+    "signature": "0e37ca6090b5c769e6332157",
+    "edge_labels": [
+      {
+        "kind": "simp_bundle",
+        "head": "rw",
+        "lemma_tuple": [
+          "if_neg"
+        ],
+        "direction_tuple": []
+      },
+      {
+        "kind": "rewrite_step",
+        "head": "rw",
+        "lemma_tuple": [
+          "add_succ"
+        ],
+        "direction_tuple": [
+          "fwd"
+        ]
+      },
+      {
+        "kind": "rewrite_step",
+        "head": "rw",
+        "lemma_tuple": [
+          "choose_succ_succ"
+        ],
+        "direction_tuple": [
+          "fwd"
+        ]
+      },
+      {
+        "kind": "rewrite_step",
+        "head": "rw",
+        "lemma_tuple": [
+          "succ_add_eq_add_succ"
+        ],
+        "direction_tuple": [
+          "fwd"
+        ]
+      },
+      {
+        "kind": "decision_opaque",
+        "head": "ring",
+        "lemma_tuple": [],
+        "direction_tuple": []
+      }
+    ],
+    "examples": [
+      {
+        "theorem": "Nat.binomial_succ_succ",
+        "file_path": "Mathlib/Data/Nat/Choose/Multinomial.lean",
+        "category": "Data",
+        "edge_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "node_keys": [
+          "bb196fa595630590",
+          "c0e7a977b28b985d",
+          "04242b85cd4e97ea",
+          "f8170b19931ec0f1",
+          "7ce3ec56da48a4d5",
+          "NOGOALS__________"
+        ],
+        "tactic_chain": [
+          "rw [if_neg h.symm]",
+          "rw [add_succ]",
+          "rw [choose_succ_succ]",
+          "rw [succ_add_eq_add_succ]",
+          "ring"
+        ],
+        "tactic_range": [
+          1,
+          3
+        ],
+        "state_excerpts": [
+          "α : Type u_1 s : Finset α f : α → ℕ a b : α n : ℕ inst✝ : DecidableEq α h : a ≠ b ⊢ ((f a).succ + (f b).succ).choose (f a).succ = ((f a).succ + if b = a then (f a).succ else f b).choose (f a).succ + (f a + (f b).succ).ch",
+          "α : Type u_1 s : Finset α f : α → ℕ a b : α n : ℕ inst✝ : DecidableEq α h : a ≠ b ⊢ ((f a).succ + (f b).succ).choose (f a).succ = ((f a).succ + f b).choose (f a).succ + (f a + (f b).succ).choose (f a)",
+          "α : Type u_1 s : Finset α f : α → ℕ a b : α n : ℕ inst✝ : DecidableEq α h : a ≠ b ⊢ ((f a).succ + f b).succ.choose (f a).succ = ((f a).succ + f b).choose (f a).succ + (f a + (f b).succ).choose (f a)",
+          "α : Type u_1 s : Finset α f : α → ℕ a b : α n : ℕ inst✝ : DecidableEq α h : a ≠ b ⊢ ((f a).succ + f b).choose (f a) + ((f a).succ + f b).choose (f a).succ = ((f a).succ + f b).choose (f a).succ + (f a + (f b).succ).choos",
+          "α : Type u_1 s : Finset α f : α → ℕ a b : α n : ℕ inst✝ : DecidableEq α h : a ≠ b ⊢ (f a + (f b).succ).choose (f a) + (f a + (f b).succ).choose (f a).succ = (f a + (f b).succ).choose (f a).succ + (f a + (f b).succ).choos",
+          "no goals"
+        ]
+      }
+    ],
+    "verification_status": "candidate_from_existing_verified_proofs_not_new_lean_declaration"
+  }
+]
